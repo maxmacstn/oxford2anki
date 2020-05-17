@@ -150,11 +150,12 @@ def main(argv):
         if len(opts) == 0:
             raise getopt.GetoptError("please enter options")
     except getopt.GetoptError:
-        print('test.py -i <inputfile> -o <outputfile>')
+        print('oxford2anki.py -i <inputfile> -o <outputfile>')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print('dict2Anki -i <inputfile> -o <outputfile>')
+            print('oxford2anki.py -i <inputfile> -o <outputfile>')
+            print('Input file is a text file contains words separeted by new line')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             inputfile = arg
